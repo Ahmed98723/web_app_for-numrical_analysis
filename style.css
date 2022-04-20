@@ -1,0 +1,141 @@
+.algo{
+    position: absolute;
+   width: 100%;
+    top:0px;
+}
+.parent{
+    height: 200px;
+}
+.text-center{
+    padding-top: 10px;
+}
+
+#outputcard{
+    height: 150px;
+    
+}
+#output{
+    
+    height : 100%;
+    top: 40;
+}
+
+
+#output>.MathJax{
+    margin:50px auto;
+   font-size: 200% !important;
+    height : 100%;
+}
+.mat .MathJax{
+
+    margin:50px auto;
+    font-size: 150% !important;
+    height : 100%;
+    text-align: center;
+}
+.error>.MathJax{
+    position: relative;
+   
+   height: 33px;
+    font-size: 200% !important;
+}
+
+.error{
+    padding-top: 0;
+}
+.otp{
+    padding-bottom: 10px;
+}
+.invalid{
+    background-color: rgba(168, 74, 74,0.2);
+     border-color: red;
+  }
+  table.matrix {
+    display: inline-block;
+    width: fit-content; /*shrink table width*/
+    text-align: center; /*align cells to center*/
+  
+    border-collapse: collapse; /*make the line inside augmented matrix collapse*/
+    border: 2px solid #555555; /*create outer brackets*/
+  
+    font-weight: bold;
+  }
+  
+  /* for all */
+  table.matrix td {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+  
+  /* for all */
+  table.matrix input {
+    /* make input cells in a matrix have depth */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+  
+    /* input matrix style */
+    min-width: 2rem;
+    max-width: 2rem;
+    text-align: center;
+    line-height: 20px;
+    padding: 1px;
+    font-weight: bold;
+  }
+  
+  /* for augmented matrix */
+  table.augmented-matrix tr td:last-child {
+    border: 1px solid #555555;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+  }
+  
+  /* Square bracket [] */
+  table.square-brackets:before,
+  table.matrix:before {
+    content: ' ';
+    background-color: white;
+    width: 95%;
+    text-align: center;
+    height: 2.5px;
+    position: relative;
+    top: -2px;
+    z-index: 100;
+    display: block;
+    margin: 0px auto;
+  }
+  
+  /* Square bracket [] */
+  table.square-brackets:after,
+  table.matrix:after {
+    content: ' ';
+    background-color: white;
+    width: 95%;
+    text-align: center;
+    height: 2.5px;
+    position: relative;
+    top: 2px;
+    z-index: 100;
+    display: block;
+    margin: 0px auto;
+  }
+  /*Hide Arrows From Input Number --> Chrome, Safari, Edge, Opera */
+table.matrix input::-webkit-outer-spin-button,
+table.matrix input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*Hide Arrows From Input Number --> Firefox */
+table.matrix input[type='number'] {
+  -moz-appearance: textfield;
+}
+.itrationdiv{
+    max-height: 30px;
+    margin: 0 10px;
+}
+.checktoit{
+    position: relative;
+    left:45%;
+    top: -9px;
+}

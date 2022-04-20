@@ -1,0 +1,379 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
+<script src="./js/nerdamer.core.js"></script> 
+<script src="./js/Algebra.js"></script>
+<script src="./js/Calculus.js"></script>
+<script src="./js/Solve.js"></script>
+<script src="./js/Extra.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+    <body>
+        <canvas id="matrix"></canvas>
+        
+        <div class="container mt-5 " id="content">
+
+            <div class="row  justify-content-center header">
+
+                <div class="col-6">
+                    <div class="card bg-success">
+                    <div class="card-body">
+                        <p class="card-text" style="color: white; font-size: larger; text-align: center;"> Numerical Analysis Methods </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group col-3">
+                    <label for="exampleFormControlSelect1">Alogrithms</label>
+                    <select class="form-control" id="selection">
+                    <option value="1">bisection</option>
+                    <option value="2">simple fixed point</option>
+                    <option value="3">false position</option>
+                    <option value="4">newton</option>
+                    <option value="5">guass elimination</option>
+                    <option value="6">lu decomposition</option>
+                    </select>
+                </div>
+            </div>
+            <!--***************************************inputs card ********************************-->
+            <div class="parent"style="position: relative;">
+            <!--***************************************bisection ********************************-->
+            <div class=" justify-content-center mt-5 algo bisection" >
+                <div class="card ">
+                    <div class="card-header">
+                    bisection
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >Equation</span>
+                            </div>
+                            <input type="text" id="beq" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                    <div class="row rows-cols-2">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >XL</span>
+                            </div>
+                            <input type="text" id="bxl" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">XU</span>
+                            </div>
+                            <input type="text" id="bxu" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">err</span>
+                            </div>
+                            <div class="itrationdiv">
+                                <label for="checktoit">Itrations</label>
+                                <br>
+                                <input class="checktoit" id="bichecktoit" type="checkbox">
+                            </div>
+                           
+                            <input type="text" id="bierror" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                    <button type="button" id="bisubmit" class="btn btn-success">Success</button>
+                </div>
+            </div>
+            <!--***************************************bisection ********************************-->
+            <!--***************************************simple fixed point ********************************-->
+            <div class="justify-content-center mt-5 algo simplefixed" >
+                <div class="card ">
+                    <div class="card-header">
+                        simple fixed point
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >Equation</span>
+                            </div>
+                            <input type="text" class="form-control"id="sieq" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >X0</span>
+                            </div>
+                            <input type="text" class="form-control"id="six0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">err</span>
+                            </div>
+                            <div class="itrationdiv">
+                                <label for="checktoit">Itrations</label>
+                                <br>
+                                <input id="sichecktoit" class="checktoit" type="checkbox">
+                            </div>
+                            <input type="text" id="sierror" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        
+                    </div>
+                    <button type="button" id="sisubmit" class="btn btn-success">Success</button>
+                </div>
+            </div>
+        
+            <!--***************************************simple fixed point ********************************-->
+            
+            <!--***************************************false position ***********************************-->
+            <div class=" justify-content-center mt-5 algo falseposition" >
+                <div class="card ">
+                    <div class="card-header">
+                    false position
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >Equation</span>
+                            </div>
+                            <input type="text" class="form-control" id="faeq" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                    <div class="row rows-cols-2">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >XL</span>
+                            </div>
+                            <input type="text" class="form-control" id="faxl" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >XU</span>
+                            </div>
+                            <input type="text" class="form-control" id="faxu" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">err</span>
+                            </div>
+                            <div class="itrationdiv">
+                                <label for="checktoit">Itrations</label>
+                                <br>
+                                <input class="checktoit" id="fachecktoit" type="checkbox">
+                            </div>
+                            <input type="text" id="faerror" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                    <button type="button" id="fasubmit" class="btn btn-success">Success</button>
+                </div>
+            </div>
+            <!--*************************************false position ********************************-->
+            <!--***************************************newton *********************************-->
+            <div class=" justify-content-center mt-5 algo newton" >
+                <div class="card ">
+                    <div class="card-header">
+                        newton
+                    </div>
+                    <div class="row row-cols-1">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >Equation</span>
+                            </div>
+                            <input type="text" class="form-control" id="neweq" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="row rows-cols-2">
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >X0</span>
+                            </div>
+                            <input type="text" class="form-control" id="newx0" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3 col">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">err</span>
+                            </div>
+                            <div class="itrationdiv">
+                                <label for="checktoit">Itrations</label>
+                                <br>
+                                <input class="checktoit" id="newchecktoit" type="checkbox">
+                            </div>
+                            <input type="text" id="newerror" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                    </div>
+                    <button type="button" id="newubmit"  class="btn btn-success">Success</button>
+                </div>
+            </div>
+            <!--***************************************newton ********************************-->
+            <!--***************************************guass elimination ***************************-->
+            <div class=" justify-content-center mt-5 algo guass  " >
+                <div class="card ">
+                    <div class="card-header">
+                        guass elimination
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3 col justify-content-center">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >Equation <br> In <br> Matrix</span>
+                            </div>
+                            <table class="matrix augmented-matrix">
+                                <tr>
+                                  <td>
+                                    <input type="number" id="e1"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="e2"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="e3"  />
+                                  </td>
+                                  <div id="hide_x1">
+                                    <td>
+                                      <input type="number" id="e4" />
+                                    </td>
+                                  </div>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="number" id="e5"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="e6" />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="e7"  />
+                                  </td>
+                                  <div id="hide_x2">
+                                    <td>
+                                      <input type="number" id="e8" />
+                                    </td>
+                                  </div>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="number" id="e9"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="e10"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="e11" />
+                                  </td>
+                                  <div id="hide_x3">
+                                    <td>
+                                      <input type="number" id="e12" />
+                                    </td>
+                                  </div>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+                    <button id="guassubmit" type="button" class="btn btn-success">Success</button>
+                </div>
+            </div>
+              <!--**************************************guass elimination ********************************-->
+            
+                <!--***************************************lu decomposition ****************************-->
+            <div class=" justify-content-center mt-5 algo lu" >
+                <div class="card ">
+                    <div class="card-header">
+                        lu decomposition
+                    </div>
+                    <div class="row">
+                        <div class="input-group mb-3 col justify-content-center">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" >Equation <br> In <br> Matrix</span>
+                            </div>
+                            <table class="matrix augmented-matrix">
+                                <tr>
+                                  <td>
+                                    <input type="number" id="le1"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="le2"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="le3"  />
+                                  </td>
+                                  <div id="hide_x1">
+                                    <td>
+                                      <input type="number" id="le4" />
+                                    </td>
+                                  </div>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="number" id="le5"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="le6" />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="le7"  />
+                                  </td>
+                                  <div id="hide_x2">
+                                    <td>
+                                      <input type="number" id="le8" />
+                                    </td>
+                                  </div>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="number" id="le9"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="le10"  />
+                                  </td>
+                                  <td>
+                                    <input type="number" id="le11" />
+                                  </td>
+                                  <div id="hide_x3">
+                                    <td>
+                                      <input type="number"id="le12" />
+                                    </td>
+                                  </div>
+                                </tr>
+                              </table>
+                            
+                        </div>
+                    </div>
+                   
+                    <button type="button" id="lusubmit" class="btn btn-success">Success</button>
+                </div>
+            </div>
+           <!-- *************************************lu decomposition ********************************-->
+        
+            </div>
+            <!--***************************************inputs card ********************************-->
+
+            <!--***************************************equation ********************************-->
+            <div class=" justify-content-center mt-5"style="visibility:visibile;" id="outputcard">
+                <div class="card  " id="output">
+                    
+                </div>
+            </div>
+            <!--***************************************equation ********************************-->
+
+            <div class=" justify-content-center mt-5" style="position: relative;">
+                <div class="card" id="result" >
+                    <div class="card-header justify-content-center">Result</div>
+
+                    
+                    
+                </div>
+            </div>
+            
+        
+                    
+        </div>
+
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+        <script src="./js/test.js"></script>
+        <script src="./js/math.js"></script>
+        <script src="./js/script.js"></script>
+
+
+    </body>
+</html>
